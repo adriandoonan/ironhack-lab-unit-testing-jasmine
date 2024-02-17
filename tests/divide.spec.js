@@ -14,7 +14,7 @@ describe("Iteration 2", () => {
           });
       
           it("should return the sum of the two numbers", () => {
-            expect(divide(1, 0)).toBe(Infinity);
+            expect(divide(0, 1)).toBe(0);
             expect(divide(3, 4)).toEqual(0.75);
             expect(divide(4, 2)).toEqual(2);
             expect(divide(100.420, 47.123)).toEqual(2.1310188230800247);
@@ -22,7 +22,13 @@ describe("Iteration 2", () => {
           });
       
           it("should return undefined if one or no arguments are provided, or the first is undefined", () => {
-            expect(divide(1)).toEqual(undefined);
+            expect(divide(1,0)).toEqual(undefined);
+            expect(divide(1,2,3,0)).toEqual(undefined);
+            expect(divide(1,2,3,0,3,2,1)).toEqual(undefined);
+          });
+
+          it("should return undefined if the user tries to divide by 0", () => {
+            expect(divide(1,0)).toEqual(undefined);
             expect(divide()).toEqual(undefined);
             expect(divide(undefined, 1)).toEqual(undefined);
           });

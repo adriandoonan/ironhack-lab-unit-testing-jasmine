@@ -10,13 +10,12 @@ describe("Iteration 5", () => {
           });
 
         it("should return undefined if any of the arguments is not an array", () => {
-            expect(sumArrayNumbers({firstName: 'foo'})).toEqual(undefined);
-            expect(sumArrayNumbers({lastName: 'foo'})).toEqual(undefined);
-            expect(sumArrayNumbers({firstName: '',lastName: 'foo'})).toEqual(undefined);
-            expect(sumArrayNumbers({firstName: 'foo',lastName: null})).toEqual(undefined);
-            expect(sumArrayNumbers({firstName: undefined,lastName: 'foo'})).toEqual(undefined);
-            expect(sumArrayNumbers({firstName: undefined,lastName: 'foo'})).toEqual(undefined);
-            expect(sumArrayNumbers({firstName: ['some', 'name'],lastName: 'foo'})).toEqual(undefined);
+            expect(sumArrayNumbers([{obj: 'ect'},6])).toEqual(undefined);
+            expect(sumArrayNumbers([1,NaN])).toEqual(undefined);
+            expect(sumArrayNumbers(['string',6])).toEqual(undefined);
+            expect(sumArrayNumbers([4, null])).toEqual(undefined);
+            expect(sumArrayNumbers([undefined,2])).toEqual(undefined);
+            expect(sumArrayNumbers([['some', 'array'],3])).toEqual(undefined);
           });
       
         it("should return undefined if any of the arguments is not a number", () => {

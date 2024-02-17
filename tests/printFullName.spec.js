@@ -31,16 +31,6 @@ describe("Iteration 4", () => {
             expect(printFullName(trimmableName)).toEqual('foo bar');
             expect(printFullName(smileyName)).toBe('😾 angry Cat!');
         });
-    
-    
-        //   it("should return undefined if any of the arguments is not a number", () => {
-        //     expect(calculateArea(1,'string')).withContext(`expected string to return 'undefined', got ${calculateArea(1,'string')}\n`).toEqual(undefined);
-        //     expect(calculateArea(['array'],2)).withContext(`expected array to return 'undefined', got ${calculateArea(['array'],2)}\n`).toEqual(undefined);
-        //     expect(calculateArea(null, 1)).withContext(`expected null to return 'undefined', got ${calculateArea(null, 1)}\n`).toEqual(undefined);
-        //     expect(calculateArea(1, {my: 'object'})).withContext(`expected object to return 'undefined', got ${calculateArea(1, {my: 'object'})}\n`).toEqual(undefined);
-        //     expect(calculateArea(NaN,2)).withContext(`expected NaN to return 'undefined', got ${calculateArea(NaN,2)}\n`).toEqual(undefined);
-        //     expect(calculateArea(1,Infinity)).withContext(`expected infinity to return 'undefined', got ${calculateArea(1,Infinity)}\n`).toEqual(undefined);
-        //   });
 
     })    
 })
